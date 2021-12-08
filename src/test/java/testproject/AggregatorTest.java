@@ -33,5 +33,14 @@ public class AggregatorTest {
         Aggregator agr = new Aggregator();
         agr.reset();
         assertThat(agr.getSum()).isEqualTo(0);
+
+        double val = 15;
+        agr.addValue(val);
+        agr.reset();
+        assertThat(agr.getSum()).isEqualTo(0);
+
+        agr.addValue(val);
+        agr.reset();
+        assertThat(agr.getSum()).isEqualTo(0);
     }
 }
